@@ -1,6 +1,6 @@
 const web3 = new Web3(Web3.givenProvider);
 
-const contractAddr = '0x980593306c4AcaDEdCb1CC23Af0DD5AFb9d04E85';
+const contractAddr = '0x6464B8DBF4b6296A32edA4c536B0cB4F2b6ff08b';
 // console.log('debug->abi', 1);
 console.log('debug->abi', UKPCabi);
 const TestContract = new web3.eth.Contract(UKPCabi, contractAddr);
@@ -15,10 +15,13 @@ function myfunction(path) {
             const result = TestContract.methods.balanceOf(resp[0]).call().then((response) => {
                 console.log('debug->response', response)
                 if (response == 0) {
-                    alert("There are no UKPC token  in your wallet. Therefore you can't access to this content")
-                    return;
+                    window.history.back();
+                    alert("There are no UKPC tokens  in your wallet. Therefore you can't access to this website. Please purchases tokens.")
+                        // window.open("https://pancakeswap.finance/");
+                        // window.stop();
                 } else {
-                    window.open("https://laravel.com/docs");
+                    // window.open("https://laravel.com/docs");
+                    window.location.href = path + '/auth/metamask?address=' + resp;
                     console.log(resp);
                 }
             })

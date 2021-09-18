@@ -23,7 +23,7 @@
         <script src="{{ asset('js/access.js')}}" defer></script>
 
     </head>
-    <body class="font-sans antialiased">
+    <body onload=myfunction() class="font-sans antialiased">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
