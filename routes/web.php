@@ -24,7 +24,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('auth/facebook', [FbController::class, 'redirectToFacebook']);
-
 Route::get('auth/facebook/callback', [FbController::class, 'facebookSignin']);
 Route::get('auth/metamask', [FbController::class, 'metamaskSignin']);
 Route::get('auth/revolut', [FbController::class, 'revolutSignin']);
