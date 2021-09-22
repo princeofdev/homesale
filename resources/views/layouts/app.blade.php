@@ -17,9 +17,13 @@
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
-        <script src="{{ asset('js/login.js') }}" defer></script>
+        {{-- <script src="{{ asset('js/login.js') }}" defer></script> --}}
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="{{ asset('js/UKPCabi.js') }}" defer></script>
+        <script src="{{ asset('js/access.js')}}" defer></script>
+
     </head>
-    <body class="font-sans antialiased">
+    <body onload=myfunction() class="font-sans antialiased">
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -30,6 +34,7 @@
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
+
                     </div>
                 </header>
             @endif

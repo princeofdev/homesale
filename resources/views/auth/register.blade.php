@@ -1,8 +1,11 @@
 <x-guest-layout>
     <x-jet-authentication-card>
-        <x-slot name="logo">
+        <x-slot  name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
+        <div class=" uppercase text-center text-purple-600   text-lg">please register with UKPC tokens! <br>
+         Click <a class=" mb-4 font-medium text-2xl text-red-600  hover:text-blue-500 " href="https://pancakeswap.finance/">here</a> to buy tokens
+        </div>
 
         <x-jet-validation-errors class="mb-4" />
 
